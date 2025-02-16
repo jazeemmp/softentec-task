@@ -1,11 +1,8 @@
-import PaginatedData from "./components/PaginatedData";
-import TodoList from "./components/TodoList";
-
+import { Outlet } from "react-router-dom";
 const App = () => {
   return (
     <div>
-      <TodoList />
-      <PaginatedData/>
+      <Outlet/>
     </div>
   );
 };

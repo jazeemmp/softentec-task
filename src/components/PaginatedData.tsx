@@ -32,7 +32,6 @@ const PaginatedData = () => {
   const startIndex = (currentPage - 1) * 5;
   const paginatedData = data.slice(startIndex, startIndex + 5);
   return (
-    <div className="bg-[#faf9f6] ">
       <div className="p-4 max-w-lg mx-auto ">
         <h2 className="text-3xl font-bold mb-4 text-center ">Paginated List</h2>
 
@@ -87,7 +86,6 @@ const PaginatedData = () => {
           </>
         )}
       </div>
-    </div>
   );
 };
 

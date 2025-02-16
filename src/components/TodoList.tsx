@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MdDeleteForever, MdOutlineRadioButtonUnchecked } from "react-icons/md";
 import { FaRegCheckCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 interface Task {
   register_no: string;
@@ -56,7 +57,7 @@ const ToDoList: React.FC = () => {
   };
 
   return (
-    <div className={`flex flex-col gap-6 items-center justify-center  h-[90vh] ${toggleDark ? "bg-[#121212] text-white " : "bg-[#faf9f6]"}`}>
+    <div className={`flex flex-col gap-6 items-center justify-center  h-screen ${toggleDark ? "bg-[#121212] text-white " : "bg-[#faf9f6]"}`}>
       <div className={`shadow-md md:w-[500px] w-[90%] p-4 px-6 rounded-3xl ${toggleDark ? "bg-[#272626]" : "bg-[#fff]"}`}>
         <h2 className={`text-3xl text-center font-bold mb-4`}>To-Do List</h2>
         <div className="mb-4">
@@ -114,6 +115,7 @@ const ToDoList: React.FC = () => {
         </ul>
       </div>
       <button onClick={()=>setToggleDark(!toggleDark)} className={` cursor-pointer font-semibold rounded-md px-4 py-2 text-xl ${toggleDark ? "bg-[#fff] text-black" : "bg-[#272626] text-white"}`}>Change Style</button>
+      <Link to="/paginated-data" className="text-2xl text-blue-400 underline">Task 3 (Pagination)</Link>
     </div>
   );
 };
